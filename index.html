@@ -20,7 +20,10 @@
     <title>Viés Photography</title>
   </head>
   <body>
-    <div class="hero container-fluid overflow-hidden position-relative">
+    <div
+      class="hero container-fluid overflow-hidden position-relative"
+      id="home"
+    >
       <div class="row align-items-start gy-8">
         <div class="col">
           <h1 class="position-absolute top-0 start-50 translate-middle-x">
@@ -38,14 +41,16 @@
       <ul
         class="nav-list row flex-column flex-lg-row text-center align-items-center justify-content-center"
       >
-        <li class="col-lg-2 col-sm-2 col-6">HOME</li>
-        <li class="col-lg-2 col-sm-2 col-6">ABOUT</li>
-        <li class="col-lg-2 col-sm-2 col-6">PORTFOLIO</li>
+        <li class="col-lg-2 col-sm-2 col-6"><a href="#home">HOME</a></li>
+        <li class="col-lg-2 col-sm-2 col-6"><a href="#about">ABOUT</a></li>
+        <li class="col-lg-2 col-sm-2 col-6">
+          <a href="#portfolio">PORTFOLIO</a>
+        </li>
         <li class="col-lg-2 col-sm-2 col-6">CONTACT</li>
       </ul>
     </div>
 
-    <div class="about container-fluid">
+    <div class="about container-fluid" id="about">
       <div class="row flex-md-row flex-column align-items-center text-center">
         <div class="col-md-6 order-md-2 order-2">
           <h1 class="about-h1 about-text">DESTINATION WEDDING STORYTELLER</h1>
@@ -76,7 +81,7 @@
         <img class="break-img" src="imgs/quebra-de-pagina.jpg" />
       </div>
     </div>
-    <div class="container-fluid text-center galeria-text">
+    <div class="container-fluid text-center galeria-text" id="portfolio">
       <h1>A STORYTELLING APPROACH</h1>
       <br />
       <p>
@@ -95,24 +100,136 @@
     </div>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-4 col-lg-4 col-12 mb-4">
-          <img class="galeria-img" src="/imgs/galeria1.jpg" />
+        <div class="col-md-4 col-lg-4 col-12 mb-4 galeria-card">
+          <a
+            target="_blank"
+            href="https://akemymoryphotography.pixieset.com/marinaegui/"
+          >
+            <img class="galeria-img" src="/imgs/galeria1.jpg" />
+            <h3>Marina & Gui</h3>
+          </a>
         </div>
-        <div class="col-md-4 col-lg-4 col-12 mb-4">
-          <img class="galeria-img" src="/imgs/galeria2.jpg" />
+        <div class="col-md-4 col-lg-4 col-12 mb-4 galeria-card">
+          <a
+            target="_blank"
+            href="https://akemymoryphotography.pixieset.com/nancierafa/"
+          >
+            <img class="galeria-img" src="/imgs/galeria2.jpg" />
+            <h3>Nanci & Rafa</h3>
+          </a>
         </div>
-        <div class="col-md-4 col-lg-4 col-12 mb-4">
-          <img class="galeria-img" src="/imgs/galeria3.jpg" />
+        <div class="col-md-4 col-lg-4 col-12 mb-4 galeria-card">
+          <a
+            target="_blank"
+            href="https://akemymoryphotography.pixieset.com/casamentorassaejoovictor/"
+          >
+            <img class="galeria-img" src="/imgs/galeria3.jpg" />
+            <h3>João & Raíssa</h3>
+          </a>
         </div>
       </div>
     </div>
-    <div class="container footer">
-      <div class="col">
-        <p>
-          designed and coded by Akemy Mory
-          <br />
-          2023
-        </p>
+    <div class="container-fluid text-center" id="contact">
+      <h1>Let’s connect</h1>
+      <p>
+        Hey there! We're thrilled to hear from you. <br />
+        If you're looking for a photography team that shares your love and
+        passion for genuine moments and emotions, please use the contact form
+        provided below. <br />
+        We'll do our best to respond as swiftly as possible.
+      </p>
+      <div class="row contact-form">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="coupleName" class="form-label"
+                >Name of the Couple</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="coupleName"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Looking For</label><br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="lookingFor"
+                  id="photo"
+                  value="photo"
+                  required
+                />
+                <label class="form-check-label" for="photo">Photo</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="lookingFor"
+                  id="video"
+                  value="video"
+                  required
+                />
+                <label class="form-check-label" for="video">Video</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="lookingFor"
+                  id="photoVideo"
+                  value="photoVideo"
+                  required
+                />
+                <label class="form-check-label" for="photoVideo"
+                  >Photo & Video</label
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="guests" class="form-label">Number of Guests</label>
+              <input type="number" class="form-control" id="guests" />
+            </div>
+
+            <div class="mb-3">
+              <label for="venueLocation" class="form-label"
+                >Venue and Location</label
+              >
+              <textarea
+                class="form-control"
+                id="venueLocation"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="reason" class="form-label"
+                >Why You Want to Book with Us</label
+              >
+              <textarea class="form-control" id="reason" rows="4"></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </body>

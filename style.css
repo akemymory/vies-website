@@ -19,6 +19,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+  font-family: "Space Grotesk";
 }
 
 .hero h1 {
@@ -40,6 +41,25 @@ body {
   display: inline;
   color: wheat;
   padding: 1rem;
+  font-family: "Space Grotesk";
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .about-me-img {
@@ -51,6 +71,7 @@ body {
   max-width: 70%;
   margin: 0 auto;
   padding-bottom: 20px;
+  font-family: "Space Grotesk";
 }
 
 .break-img {
@@ -71,6 +92,7 @@ body {
 
 .galeria-text {
   max-width: 70%;
+  font-family: "Space Grotesk";
 }
 
 .galeria-text h1 {
@@ -83,4 +105,72 @@ body {
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.galeria-card h3 {
+  display: none;
+}
+
+.galeria-card {
+  position: relative;
+  font-family: "Space Grotesk";
+}
+
+.galeria-img {
+  max-width: 100%;
+}
+
+.galeria-card:hover h3 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 5px;
+  z-index: 1;
+}
+
+.galeria-card:hover .galeria-img {
+  opacity: 0.7;
+}
+
+#contact {
+  background-color: #1e1e1e;
+  color: white;
+  font-family: "Space Grotesk";
+  margin: 0;
+  padding: 0;
+}
+
+#contact h1 {
+  padding-top: 30px;
+  margin: 0;
+}
+
+form {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.text-center button {
+  margin: 20px auto;
+  display: block;
+}
+
+.contact-form .col-md-6 {
+  padding: 20px; /* Add padding to both sides of the columns */
+}
+
+.contact-form .col-md-6:not(:first-child) {
+  margin-top: 10px;
+}
+.contact-form {
+  padding: 30px 0;
 }
