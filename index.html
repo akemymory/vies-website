@@ -159,7 +159,15 @@
       </p>
       <div class="row justify-content-center contact-form">
         <div class="col-md-8 p-4">
-          <form class="form1" name="contact" method="POST" data-netlify="true">
+          <form
+            class="form1"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+
             <div class="mb-3">
               <label for="coupleName" class="form-label">
                 <strong>Name of the Couple</strong>
@@ -168,6 +176,7 @@
                 type="text"
                 class="form-control"
                 id="coupleName"
+                name="coupleName"
                 required
               />
             </div>
@@ -176,7 +185,13 @@
               <label for="email" class="form-label">
                 <strong>E-mail</strong>
               </label>
-              <input type="email" class="form-control" id="email" required />
+              <input
+                type="email"
+                class="form-control"
+                name="e-mail"
+                id="email"
+                required
+              />
             </div>
 
             <div class="mb-3">
@@ -188,7 +203,7 @@
                   <input
                     class="form-check-input"
                     type="radio"
-                    name="lookingFor"
+                    name="photo"
                     id="photo"
                     value="photo"
                     required
@@ -201,7 +216,7 @@
                   <input
                     class="form-check-input"
                     type="radio"
-                    name="lookingFor"
+                    name="video"
                     id="video"
                     value="video"
                     required
@@ -214,7 +229,7 @@
                   <input
                     class="form-check-input"
                     type="radio"
-                    name="lookingFor"
+                    name="photoVideo"
                     id="photoVideo"
                     value="photoVideo"
                     required
@@ -233,6 +248,7 @@
               <textarea
                 class="form-control"
                 id="venueLocation"
+                name="location"
                 rows="1"
                 required
               ></textarea>
@@ -242,14 +258,24 @@
               <label for="guests" class="form-label">
                 <strong>Number of Guests</strong>
               </label>
-              <input type="number" class="form-control" id="guests" />
+              <input
+                type="number"
+                class="form-control"
+                name="guests"
+                id="guests"
+              />
             </div>
 
             <div class="mb-3">
               <label for="reason" class="form-label">
                 <strong>Why You Want to Book with Us</strong>
               </label>
-              <textarea class="form-control" id="reason" rows="4"></textarea>
+              <textarea
+                class="form-control"
+                id="reason"
+                name="reason"
+                rows="4"
+              ></textarea>
             </div>
 
             <div class="text-center">

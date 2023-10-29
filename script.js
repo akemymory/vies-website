@@ -28,8 +28,16 @@ document
     const guests = document.getElementById("guests").value;
     const reason = document.getElementById("reason").value;
 
+    const form = document.getElementById("contact-form");
     const confirmationMessage = document.getElementById("confirmation-message");
-    confirmationMessage.textContent =
-      "Thank you for your submission. We will get back to you as soon as possible.";
-    confirmationMessage.style.display = "block"; // Display the message
+
+    // Assuming you have a function for form validation (e.g., validar())
+    if (validar()) {
+      // Hide the form
+      form.style.display = "none";
+      // Display the confirmation message
+      confirmationMessage.textContent =
+        "Thank you for your submission. We will get back to you as soon as possible.";
+      confirmationMessage.style.display = "block";
+    }
   });
