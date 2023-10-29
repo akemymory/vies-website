@@ -17,13 +17,27 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <title>Viés Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Viés Photography - Your destination wedding storyteller in Lisbon. Capturing the essence of your special day with passion and creativity. Contact us for genuine moments and emotions."
+    />
+    <title>Viés Photography - Lisbon Wedding Photographer</title>
   </head>
   <body>
-    <div
-      class="hero container-fluid overflow-hidden position-relative"
-      id="home"
-    >
+    <div class="hero container-fluid position-relative" id="home">
+      <div class="image-slider">
+        <!-- Add your image slides here -->
+        <div class="slide"><img src="image1.jpg" alt="Image 1" /></div>
+        <div class="slide"><img src="image2.jpg" alt="Image 2" /></div>
+        <div class="slide"><img src="image3.jpg" alt="Image 3" /></div>
+        <div class="slide"><img src="image4.jpg" alt="Image 4" /></div>
+      </div>
       <div class="row align-items-start gy-8">
         <div class="col">
           <h1 class="position-absolute top-0 start-50 translate-middle-x">
@@ -43,10 +57,11 @@
       >
         <li class="col-lg-2 col-sm-2 col-6"><a href="#home">HOME</a></li>
         <li class="col-lg-2 col-sm-2 col-6"><a href="#about">ABOUT</a></li>
+        <li class="col-lg-2 col-sm-2 col-6 logo"><strong>V</strong></li>
         <li class="col-lg-2 col-sm-2 col-6">
           <a href="#portfolio">PORTFOLIO</a>
         </li>
-        <li class="col-lg-2 col-sm-2 col-6">CONTACT</li>
+        <li class="col-lg-2 col-sm-2 col-6"><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
 
@@ -131,20 +146,20 @@
     </div>
     <div class="container-fluid text-center" id="contact">
       <h1>Let’s connect</h1>
-      <p>
+      <p class="contact-text">
         Hey there! We're thrilled to hear from you. <br />
         If you're looking for a photography team that shares your love and
         passion for genuine moments and emotions, please use the contact form
         provided below. <br />
         We'll do our best to respond as swiftly as possible.
       </p>
-      <div class="row contact-form">
-        <div class="col-md-6">
-          <form>
+      <div class="row justify-content-center contact-form">
+        <div class="col-md-8 p-4">
+          <form class="form1">
             <div class="mb-3">
-              <label for="coupleName" class="form-label"
-                >Name of the Couple</label
-              >
+              <label for="coupleName" class="form-label">
+                <strong>Name of the Couple</strong>
+              </label>
               <input
                 type="text"
                 class="form-control"
@@ -154,83 +169,106 @@
             </div>
 
             <div class="mb-3">
-              <label for="email" class="form-label">E-mail</label>
+              <label for="email" class="form-label">
+                <strong>E-mail</strong>
+              </label>
               <input type="email" class="form-control" id="email" required />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Looking For</label><br />
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="lookingFor"
-                  id="photo"
-                  value="photo"
-                  required
-                />
-                <label class="form-check-label" for="photo">Photo</label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="lookingFor"
-                  id="video"
-                  value="video"
-                  required
-                />
-                <label class="form-check-label" for="video">Video</label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="lookingFor"
-                  id="photoVideo"
-                  value="photoVideo"
-                  required
-                />
-                <label class="form-check-label" for="photoVideo"
-                  >Photo & Video</label
-                >
+              <label class="form-label">
+                <strong>Looking For</strong>
+              </label>
+              <div class="form-check d-flex justify-content-center">
+                <div class="form-check me-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="lookingFor"
+                    id="photo"
+                    value="photo"
+                    required
+                  />
+                  <label class="form-check-label" for="photo"
+                    ><strong>Photo</strong></label
+                  >
+                </div>
+                <div class="form-check me-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="lookingFor"
+                    id="video"
+                    value="video"
+                    required
+                  />
+                  <label class="form-check-label" for="video"
+                    ><strong>Video</strong></label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="lookingFor"
+                    id="photoVideo"
+                    value="photoVideo"
+                    required
+                  />
+                  <label class="form-check-label" for="photoVideo"
+                    ><strong>Photo & Video</strong></label
+                  >
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-
-        <div class="col-md-6">
-          <form>
-            <div class="mb-3">
-              <label for="guests" class="form-label">Number of Guests</label>
-              <input type="number" class="form-control" id="guests" />
-            </div>
 
             <div class="mb-3">
-              <label for="venueLocation" class="form-label"
-                >Venue and Location</label
-              >
+              <label for="venueLocation" class="form-label">
+                <strong>Venue and Location</strong>
+              </label>
               <textarea
                 class="form-control"
                 id="venueLocation"
-                rows="3"
+                rows="1"
                 required
               ></textarea>
             </div>
 
             <div class="mb-3">
-              <label for="reason" class="form-label"
-                >Why You Want to Book with Us</label
-              >
+              <label for="guests" class="form-label">
+                <strong>Number of Guests</strong>
+              </label>
+              <input type="number" class="form-control" id="guests" />
+            </div>
+
+            <div class="mb-3">
+              <label for="reason" class="form-label">
+                <strong>Why You Want to Book with Us</strong>
+              </label>
               <textarea class="form-control" id="reason" rows="4"></textarea>
             </div>
 
             <div class="text-center">
-              <button type="submit" class="btn btn-primary">Send</button>
+              <button type="submit" class="btn btn-primary" onclick="validar()">
+                Send
+              </button>
             </div>
           </form>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="container">
+        <p>
+          Follow us on
+          <a class="footer-a" href="http://www.instagram.com/viesphotography"
+            >instagram
+          </a>
+          <br />
+          coded by Akemy Mory 2023©
+        </p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
