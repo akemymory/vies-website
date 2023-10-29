@@ -16,14 +16,13 @@ setInterval(() => {
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the form from submitting and refreshing the page
+    e.preventDefault();
 
-    // Collect form data
     const coupleName = document.getElementById("coupleName").value;
     const email = document.getElementById("email").value;
     const lookingFor = document.querySelector(
       'input[name="lookingFor"]:checked'
-    ).value;
+    );
     const venueLocation = document.getElementById("venueLocation").value;
     const guests = document.getElementById("guests").value;
     const reason = document.getElementById("reason").value;
@@ -31,13 +30,21 @@ document
     const form = document.getElementById("contact-form");
     const confirmationMessage = document.getElementById("confirmation-message");
 
-    // Assuming you have a function for form validation (e.g., validar())
-    if (validar()) {
-      // Hide the form
-      form.style.display = "none";
-      // Display the confirmation message
-      confirmationMessage.textContent =
-        "Thank you for your submission. We will get back to you as soon as possible.";
-      confirmationMessage.style.display = "block";
+    if (
+      !coupleName ||
+      !email ||
+      !lookingFor ||
+      !venueLocation ||
+      !guests ||
+      !reason
+    ) {
+      alert("Please fill in all required fields.");
+      return;
     }
+
+    form.style.display = "none";
+
+    confirmationMessage.textContent =
+      "Thank you for your submission. We will get back to you as soon as possible.";
+    confirmationMessage.style.display = "block";
   });
