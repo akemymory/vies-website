@@ -256,20 +256,18 @@ footer {
   color: black;
 }
 
-/* Add these styles for the confirmation message */
 #confirmation-message {
   background-color: #1e1e1e;
-  color: #fff; /* White text color */
-  padding: 20px; /* Adjust padding as needed */
-  font-size: 1.2rem; /* Adjust font size as needed */
+  color: #fff;
+  padding: 20px;
+  font-size: 1.2rem;
   text-align: center;
-  margin-top: 10px; /* Add space between the form and message */
+  margin-top: 10px;
 }
 
-/* Adjust the position of the confirmation message on larger screens */
 @media (min-width: 768px) {
   #confirmation-message {
-    max-width: 70%; /* Limit the width on larger screens */
-    margin: 20px auto; /* Center the message horizontally and add spacing */
+    max-width: 70%;
+    margin: 20px auto;
   }
 }

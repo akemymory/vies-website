@@ -12,3 +12,24 @@ function showSlide(n) {
 setInterval(() => {
   showSlide(currentSlide + 1);
 }, 5000); // Adjust the interval duration as needed
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the form from actually submitting
+
+    // Collect form data
+    const coupleName = document.getElementById("coupleName").value;
+    const email = document.getElementById("email").value;
+    const lookingFor = document.querySelector(
+      'input[name="lookingFor"]:checked'
+    ).value;
+    const venueLocation = document.getElementById("venueLocation").value;
+    const guests = document.getElementById("guests").value;
+    const reason = document.getElementById("reason").value;
+
+    const confirmationMessage = document.getElementById("confirmation-message");
+    confirmationMessage.textContent =
+      "Thank you for your submission. We will get back to you as soon as possible.";
+    confirmationMessage.style.display = "block"; // Display the message
+  });
