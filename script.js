@@ -16,7 +16,7 @@ setInterval(() => {
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the form from actually submitting
+    e.preventDefault(); // Prevent the form from submitting and refreshing the page
 
     // Collect form data
     const coupleName = document.getElementById("coupleName").value;
