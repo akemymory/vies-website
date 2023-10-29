@@ -286,17 +286,3 @@ footer {
   font-size: 4rem;
   color: #1e1e1e;
 }
-
-button {
-  background-color: #8e412e;
-  color: white;
-  border: none;
-  width: 30%;
-}
-
-button:hover {
-  background-color: white;
-  color: #8e412e;
-  border: none;
-  width: 30%;
-}
