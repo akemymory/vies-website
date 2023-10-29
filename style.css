@@ -98,20 +98,20 @@ body {
   font-family: "Space Grotesk";
 }
 
-a:link {
+.nav-link:link {
   color: white;
   text-decoration: none;
 }
 
-a:active {
+.nav-link:active {
   color: white;
 }
 
-a:visited {
+.nav-link:visited {
   color: white;
 }
 
-a:hover {
+.nav-link:hover {
   color: white;
   text-decoration: underline;
 }
@@ -270,4 +270,19 @@ footer {
     max-width: 70%;
     margin: 20px auto;
   }
+}
+
+.link-insta {
+  font-size: 4rem;
+  color: #1e1e1e;
+}
+
+.link-insta:hover {
+  font-size: 4rem;
+  color: #8e412e;
+}
+
+.link-insta:visited {
+  font-size: 4rem;
+  color: #1e1e1e;
 }
